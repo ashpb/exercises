@@ -40,6 +40,10 @@ module Lecture2
     , constantFolding
     ) where
 
+-- VVV If you need to import libraries, do it after this line ... VVV
+
+-- ^^^ and before this line. Otherwise the test suite might fail  ^^^
+
 {- | Implement a function that finds a product of all the numbers in
 the list. But implement a lazier version of this function: if you see
 zero, you can stop calculating product and return 0 immediately.
@@ -114,6 +118,9 @@ As a reward, the knight can take the treasure chest.
 Below is the description of the fight and character specifications:
 
   * A chest contains a non-zero amount of gold and a possible treasure.
+    When defining the type of a treasure chest, you don't know what
+    treasures it stores insight, so your chest data type must be able
+    to contain any possible treasure.
   * As a reward, knight takes all the gold, the treasure and experience.
   * Experience is calculated based on the dragon type. A dragon can be
     either red, black or green.
@@ -160,12 +167,12 @@ data Knight = Knight
 dragonFight = error "TODO"
 
 ----------------------------------------------------------------------------
--- Challenges
+-- Extra Challenges
 ----------------------------------------------------------------------------
 
-{- The following exercises are considered more challenging. However,
-you still may find some of them easier than some of the previous
-ones. Difficulty is a relative concept.
+{- The following exercises are considered optional. Some of them might be more
+challenging. However, you still may find some of them easier than some of the
+previous ones. Difficulty is a relative concept.
 -}
 
 {- | Write a function that takes a list of numbers and returns 'True'
