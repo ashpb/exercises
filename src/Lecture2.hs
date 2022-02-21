@@ -178,6 +178,25 @@ data Knight = Knight
     , knightEndurance :: Int
     }
 
+data Color
+    = Red
+    | Green
+    | Black
+
+data Chest a = MkChest
+    { chestGold     :: Int 
+    , chestTreasure :: a
+    }
+
+data Dragon a = Dragon
+    { dragonColor  :: Color 
+    , dragonAttack :: Int
+    , dragonHealth :: Int
+    , dragonChest  :: Chest a
+    }
+
+
+
 dragonFight = error "TODO"
 
 ----------------------------------------------------------------------------
